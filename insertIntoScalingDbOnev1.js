@@ -9,7 +9,7 @@ var countries = ["Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra
 var dbpool = mysql.createPool({
   "connectionLimit": 100, 
   "host": "localhost",
-  "database": "scale1bad",
+  "database": "scalingdb",
   "user": "root",
   "password": "root",
   "port": 3306

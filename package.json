@@ -1,0 +1,12 @@
+{
+  "name": "scalabilityCourse",
+  "version": "0.0.0",
+  "description": "Its bout dat database",
+  "author": "",
+  "dependencies": {
+    "faker": "latest",
+    "mysql": "latest",
+    "randy": "latest",
+    "underscore": "latest"
+  }
+}

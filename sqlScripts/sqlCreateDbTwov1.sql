@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema scale2
+-- Schema scalingdb
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema scale2
+-- Schema scalingdb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `scale2` DEFAULT CHARACTER SET utf8 ;
-USE `scale2` ;
+CREATE SCHEMA IF NOT EXISTS `scalingdb` DEFAULT CHARACTER SET utf8 ;
+USE `scalingdb` ;
 
 -- -----------------------------------------------------
--- Table `scale2`.`businesses`
+-- Table `scalingdb`.`businesses`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `scale2`.`businesses` (
+CREATE TABLE IF NOT EXISTS `scalingdb`.`businesses` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `business_name` VARCHAR(100) NULL,
   `owner_first_name` VARCHAR(100) NULL,
@@ -31,9 +31,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `scale2`.`addresses`
+-- Table `scalingdb`.`addresses`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `scale2`.`addresses` (
+CREATE TABLE IF NOT EXISTS `scalingdb`.`addresses` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `street_address` VARCHAR(45) NULL,
   `city` VARCHAR(45) NULL,
@@ -49,16 +49,16 @@ CREATE TABLE IF NOT EXISTS `scale2`.`addresses` (
   INDEX `fk_address_businesses_idx` (`business_id` ASC),
   CONSTRAINT `fk_address_businesses`
     FOREIGN KEY (`business_id`)
-    REFERENCES `scale2`.`businesses` (`id`)
+    REFERENCES `scalingdb`.`businesses` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `scale2`.`business_infos`
+-- Table `scalingdb`.`business_infos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `scale2`.`business_infos` (
+CREATE TABLE IF NOT EXISTS `scalingdb`.`business_infos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `number_of_employee` DECIMAL(20) NULL,
   `department` VARCHAR(45) NULL,
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `scale2`.`business_infos` (
   INDEX `fk_business_info_businesses1_idx` (`business_id` ASC),
   CONSTRAINT `fk_business_info_businesses1`
     FOREIGN KEY (`business_id`)
-    REFERENCES `scale2`.`businesses` (`id`)
+    REFERENCES `scalingdb`.`businesses` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

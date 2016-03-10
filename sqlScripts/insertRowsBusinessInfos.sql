@@ -1,4 +1,6 @@
-INSERT INTO business_infos (number_of_employee,department,slogan,annual_business_cost,annual_revenue,annual_profit,number_of_like,number_of_dislike,business_id) VALUES (21599,"Jewelery","Assimilated discrete data-warehouse",63429,73607,-10178,651962,94150,1),
+INSERT INTO business_infos 
+(number_of_employee,department,slogan,annual_business_cost,annual_revenue,annual_profit,number_of_like,number_of_dislike,business_id) VALUES 
+(21599,"Jewelery","Assimilated discrete data-warehouse",63429,73607,-10178,651962,94150,1),
 (85703,"Baby","Triple-buffered optimal conglomeration",8462,69676,-61214,581877,702263,2),
 (38194,"Home","Polarised tertiary synergy",89817,83570,6247,939237,717717,3),
 (10393,"Industrial","Cloned encompassing implementation",63287,72974,-9687,33545,399142,4),

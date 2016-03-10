@@ -34,10 +34,10 @@ function generateAddresses(){
       ') VALUES ';
 
     var count = 10000;
-    var business_insert_id = address_id_count * count
+    var address_insert_id = address_id_count * count
     // Create records.
     _(count).times(function(n) {
-      business_insert_id += 1;
+      address_insert_id += 1;
       var street_address = '"' + faker.address.streetAddress() + '"';
       var city = '"' + faker.address.city() + '"';
       var zipcode = '"' + faker.address.zipCode() + '"';
@@ -58,7 +58,7 @@ function generateAddresses(){
         area_code + ',' +
         first_three_number + ',' +
         last_four_number + ',' +
-        business_insert_id + 
+        address_insert_id + 
         ')';
       // Comma, except for last.
       if (n != count-1) sqlQuery += ',';

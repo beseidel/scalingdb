@@ -3,15 +3,15 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema scale1
+-- Schema scalingdb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `scale1` DEFAULT CHARACTER SET utf8 ;
-USE `scale1` ;
+CREATE SCHEMA IF NOT EXISTS `scalingdb` DEFAULT CHARACTER SET utf8 ;
+USE `scalingdb` ;
 
 -- -----------------------------------------------------
--- Table `scale1`.`businesses`
+-- Table `scalingdb`.`businesses`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `scale1`.`businesses` (
+CREATE TABLE IF NOT EXISTS `scalingdb`.`businesses` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `business_name` VARCHAR(50) NULL,
   `owner_first_name` VARCHAR(50) NULL,

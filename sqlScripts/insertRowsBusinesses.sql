@@ -1,4 +1,6 @@
-INSERT INTO businesses (business_name,owner_first_name,owner_last_name,image_link,updated_at,created_at) VALUES ("Klein, Bahringer and Mertz","Edd","Cassin","http://lorempixel.com/640/480",NOW(),NOW()),
+INSERT INTO businesses 
+(business_name,owner_first_name,owner_last_name,image_link,updated_at,created_at) VALUES 
+("Klein, Bahringer and Mertz","Edd","Cassin","http://lorempixel.com/640/480",NOW(),NOW()),
 ("Beahan, Bartell and Thompson","Lessie","Reichel","http://lorempixel.com/640/480",NOW(),NOW()),
 ("Heller, Cassin and Marks","Cierra","Tromp","http://lorempixel.com/640/480",NOW(),NOW()),
 ("Rodriguez, Hilll and Armstrong","Enrico","Lindgren","http://lorempixel.com/640/480",NOW(),NOW()),
