@@ -23,9 +23,9 @@ CREATE TABLE IF NOT EXISTS `scalingdb`.`businesses` (
   `owner_first_name` VARCHAR(100) NULL,
   `owner_last_name` VARCHAR(100) NULL,
   `image_link` VARCHAR(255) NULL,
-  `country` VARCHAR(45) NULL,
   `updated_at` DATETIME NULL,
   `created_at` DATETIME NULL,
+  `bus_id` DATETIME NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `scalingdb`.`addresses` (
   `first_three_number` INT(3) NULL,
   `area_code` INT(3) NULL,
   `last_four_number` INT(4) NULL,
+  `bus_id`INT NOT NULL,
   `business_id` INT NOT NULL,
   PRIMARY KEY (`id`, `business_id`),
   INDEX `fk_address_businesses_idx` (`business_id` ASC),
@@ -68,6 +69,7 @@ CREATE TABLE IF NOT EXISTS `scalingdb`.`business_infos` (
   `annual_profit` DECIMAL(20) NULL,
   `number_of_like` INT NULL,
   `number_of_dislike` INT NULL,
+  `bus_id`INT NOT NULL,
   `business_id` INT NOT NULL,
   PRIMARY KEY (`id`, `business_id`),
   INDEX `fk_business_info_businesses1_idx` (`business_id` ASC),

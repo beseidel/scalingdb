@@ -10,7 +10,7 @@ var countries = ["Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra
 var dbpool = mysql.createPool({
   "connectionLimit": 100, 
   "host": "localhost",
-  "database": "testScale3",
+  "database": "scalingdb",
   "user": "root",
   "password": "root",
   "port": 3306
@@ -26,9 +26,9 @@ function generateBusinesses(){
       `owner_first_name,` +
       `owner_last_name,` +
       `image_link,` +
-      `b_id,` +
       `updated_at,` +
-      `created_at` +
+      `created_at,` +
+      `bus_id` +
       ') VALUES ';
 
     var count = 10000;
@@ -50,9 +50,9 @@ function generateBusinesses(){
         owner_first_name + ',' +
         owner_last_name + ',' +
         image_link + ',' +
-        b_insert_id + ',' +
         updated_at + ',' +
-        created_at +
+        created_at + ',' +
+        b_insert_id + 
       ')';
 
       // Comma, except for last.
