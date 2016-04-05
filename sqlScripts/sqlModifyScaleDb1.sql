@@ -1,23 +1,24 @@
-alter table businesses modify `business_name` VARCHAR(50) NULL;
-alter table businesses modify `owner_first_name` VARCHAR(50) NULL;
-alter table businesses modify `owner_last_name` VARCHAR(50) NULL;
-alter table businesses modify `image_link` VARCHAR(50) NULL;
-alter table businesses modify `street_address` VARCHAR(55) NULL;
-alter table businesses modify `city` VARCHAR(55) NULL;
-alter table businesses modify `zipcode` VARCHAR(55) NULL;
-alter table businesses modify `country` VARCHAR(55) NULL;
-alter table businesses modify `lat` DECIMAL NULL;
-alter table businesses modify `lon` DECIMAL NULL;
-alter table businesses modify `first_three_number` INT(3) NULL;
-alter table businesses modify `area_code` INT(3) NULL;
-alter table businesses modify `last_four_number` INT(4) NULL;
-alter table businesses modify `number_of_employee` DECIMAL(20) NULL;
-alter table businesses modify `department` VARCHAR(55) NULL;
-alter table businesses modify `slogan` VARCHAR(255) NULL;
-alter table businesses modify `annual_business_cost` DECIMAL(20) NULL;
-alter table businesses modify `annual_revenue` DECIMAL(20) NULL;
-alter table businesses modify `annual_profit` DECIMAL(20) NULL;
-alter table businesses modify `number_of_like` INT(8) NULL;
-alter table businesses modify `number_of_dislike` INT(8) NULL;
-alter table businesses modify `updated_at` DATETIME NULL;
-alter table businesses modify `created_at` DATETIME NULL;
+ALTER TABLE `businesses`
+	CHANGE `business_name` `business_name` VARCHAR(50) NULL,
+	CHANGE `owner_first_name` `owner_first_name` VARCHAR(50) NULL,
+	CHANGE `owner_last_name` `owner_last_name` VARCHAR(50) NULL,
+	CHANGE `image_link` `image_link` VARCHAR(50) NULL,
+	CHANGE `street_address` `street_address` VARCHAR(55) NULL,
+	CHANGE `city` `city` VARCHAR(55) NULL,
+	CHANGE `zipcode` `zipcode` VARCHAR(55) NULL,
+	CHANGE `country` `country` VARCHAR(55) NULL,
+	CHANGE `lat` `lat` DECIMAL NULL,
+	CHANGE `lon` `lon` DECIMAL NULL,
+	CHANGE `first_three_number` `first_three_number` INT(3) NULL,
+	CHANGE `area_code` `area_code` INT(3) NULL,
+	CHANGE `last_four_number` `last_four_number` INT(4) NULL,
+	CHANGE `number_of_employee` `number_of_employee` DECIMAL(20) NULL,
+	CHANGE `department` `department` VARCHAR(55) NULL,
+	CHANGE `slogan` `slogan` VARCHAR(255) NULL,
+	CHANGE `annual_business_cost` `annual_business_cost` DECIMAL(20) NULL,
+	CHANGE `annual_revenue` `annual_revenue` DECIMAL(20) NULL,
+	CHANGE `annual_profit` `annual_profit` DECIMAL(20) NULL,
+	CHANGE `number_of_like` `number_of_like` INT(8) NULL,
+	CHANGE `number_of_dislike` `number_of_dislike` INT(8) NULL,
+	CHANGE `updated_at` `updated_at` DATETIME NULL,
+	CHANGE `created_at` `created_at` DATETIME NULL

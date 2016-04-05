@@ -106,7 +106,11 @@ var generateBusinesses = new Promise(function(resolve, reject){
   resolve(sqlQuery);
 })
 
-setInterval(function(){
+// Set Row Insert level
+var rowsToInsert = 10000000;
+
+// Set Variable for interval Clearing
+var insertInterval = setInterval(function(){
   generateBusinesses.then(function(sqlQuery){
     dbpool.getConnection(function(err, connection){
       if(err){
@@ -117,8 +121,14 @@ setInterval(function(){
             console.log(err)
             connection.release();
           } else {
-            console.log(results)
+            console.log(results.insertId, " rows inserted");
             connection.release();
+            // Clear interval and log out finished message;
+            if(results.insertId>rowsToInsert){
+              clearInterval(insertInterval);
+              console.log("Finished");
+              process.exit();
+            };
           }
         })
       }
