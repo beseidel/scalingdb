@@ -10,7 +10,7 @@ var rowsToInsert = 10000000;
 var dbpool = mysql.createPool({
   "connectionLimit": 100, 
   "host": "localhost",
-  "database": "testscale3",
+  "database": "scalingdb",
   "user": "root",
   "password": "root",
   "port": 3306
@@ -58,7 +58,7 @@ function generateAddresses(){
         area_code + ',' +
         first_three_number + ',' +
         last_four_number + ',' +
-        address_insert_id + ','
+        address_insert_id + ',' +
         address_insert_id + 
         ')';
       if (n != count-1) sqlQuery += ',';
@@ -126,7 +126,7 @@ function generateBusinessInfos(){
         annual_profit + ',' +
         number_of_like + ',' +
         number_of_dislike + ',' +
-        business_insert_id + ','
+        business_insert_id + ',' +
         business_insert_id +
       ')';
       if (n != count-1) sqlQuery += ',';

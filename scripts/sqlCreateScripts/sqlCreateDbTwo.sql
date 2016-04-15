@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `scalingdb`.`businesses` (
   `image_link` VARCHAR(255) NULL,
   `updated_at` DATETIME NULL,
   `created_at` DATETIME NULL,
-  `bus_id` DATETIME NULL,
+  `bus_id` INT NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
